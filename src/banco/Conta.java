@@ -39,19 +39,15 @@ public class Conta {
      */
     public Conta LeDadosDaConta() {
         System.out.println("Digite seu nome: ");
-        //this.nome = leNovaConta.next();
-        this.nome = "Lucas";
-        this.agencia = 1336;
-        this.numeroDaConta = 123456;
-        this.saldo = 100.0;
-        //this.agencia = lerAgencia(leNovaConta); // Usando o método de validação
-        //this.numeroDaConta = lerConta(leNovaConta); // Usando o método de validação 
-        //this.saldo = ValidaValorDouble.validaValorDouble(leNovaConta, "Digite o saldo: ");
+        this.nome = scanner.next();
+        this.agencia = lerAgencia(); // Usando o método de validação
+        this.numeroDaConta = lerConta(scanner); // Usando o método de validação 
+        this.saldo = ValidaValorDouble.validaValorDouble(scanner, "Digite o saldo: ");
         criaChequeEspecial(this.saldo);
         return this;
     }
 
-    private int lerAgencia(Scanner scanner) {
+    private int lerAgencia() {
         int agencia;
         boolean agenciaValida = false;
         do {
