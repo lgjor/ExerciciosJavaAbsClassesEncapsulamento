@@ -1,7 +1,5 @@
 package banco;
 
-import java.util.Scanner;
-
 /**
  * A classe ContaTerminal é a classe principal que inicia o aplicativo de conta bancária.
  */
